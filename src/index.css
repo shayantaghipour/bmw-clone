@@ -1,0 +1,1598 @@
+body {
+  background-color: #ffffff; /* مثل BMW */
+  margin: 0;
+  font-family: sans-serif;
+}
+.logo-box {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  margin-left: 150px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.slogan {
+  font-size: 15px;
+  color: #333;
+}
+
+.navbar {
+  position: sticky;
+  top: 20px;
+  z-index: 999;
+  height: 85px; /* یا هر عددی که می‌خوای */
+  max-width: 1820px;         /* حداکثر عرض باکس */
+  margin: 20px auto;            /* وسط‌چین شدن */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hide {
+  transform: translateY(-200%);
+}
+
+.navbar.show {
+  transform: translateY(0);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  gap: 5px;
+}
+
+.navbar-right {
+  display: flex;
+  margin-right: 250px;
+  gap: 24px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #0072ce;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+.divider {
+  width: 1px;
+  height: 38px;
+  background-color: #000000;
+  margin: 0 12px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-container {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: white;
+}
+
+.hero-left {
+  flex: 1;
+  margin-left: 150px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #003f7f;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 40px 100px;
+  background-color: #fff;
+}
+
+.feature-card {
+  display: flex;
+  margin: 1rem;
+  gap: 6px;
+  flex-direction: column;
+  background: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.feature-text {
+  padding: 15px;
+}
+
+.feature-text h4 {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.feature-text h3 {
+  font-size: 18px;
+  color: #111;
+  margin-top: 5px;
+}
+
+.feature-video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* BMWUpdateSection.css */
+.update-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.update-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.update-card {
+  background-color: #fff;
+  width: 400px;
+  transition: transform 1s ease, box-shadow 1s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.update-card p {
+  margin: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.update-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.expert-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 30rem;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+.expert-video {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.expert-container {
+  flex: 1 1 300px;
+}
+
+.expert-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.expert-link {
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expert-link:hover {
+  color: #0071c5;
+}
+
+.slider-container {
+  position: relative;
+  margin-left: 250px;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slider-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider-buttons button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2.5rem; /* یا 40px */
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 270px;
+}
+
+ .description {
+  font-size: 0.875rem; /* یا 14px */
+  line-height: 1.6;
+  color: #333;
+  margin-top: 1rem;
+  max-width: 400px;
+  margin-left: 270px;
+}
+
+.listen-btn {
+  margin-left: 270px;
+  margin-top: 1rem;
+  padding: 0.5rem 2.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.listen-btn:hover {
+  background-color: #0071c5;
+  border: 2px solid #0071c5;
+  color: white;
+}
+
+.showroom {
+  text-align: center;
+  padding: 2rem;
+}
+
+.model-selector button {
+  margin: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  background: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.model-selector button:hover {
+  background: #444;
+}
+
+.car-display {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.car-image {
+  max-width: 500px;
+  transition: transform 0.5s ease;
+  opacity: 0.7;
+}
+
+.car-image.active {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.start-button {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.start-button img {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.start-button img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.rev-button {
+  background-color: #222;
+  margin-top: 2rem;
+  background: #222;
+  width: 100px;
+  height: 120px;
+  border-radius: 20px;
+  position: relative;
+  border: none;
+  box-shadow: inset 0 4px 10px #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rev-button:active {
+  transform: translateY(4px) scale(0.98);
+}
+
+.engine-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+
+.stop-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.rev-button:hover,
+.stop-button:hover {
+  background: #333;
+}
+
+.stop-button img {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.wallpaper-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.wallpaper-container {
+  position: relative;
+  display: inline-block;
+}
+
+.main-image {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-image {
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.overlay-image.phone {
+  width: 140px;
+  top: -40px;
+  right: -50px;
+  rotate: 5deg;
+}
+
+.overlay-image.factory {
+  width: 90px;
+  bottom: -30px;
+  left: -30px;
+  rotate: -10deg;
+}
+
+.wallpaper-title {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bmw-section {
+  padding: 2rem 1rem;
+  background-color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  min-width: 280px;
+  text-align: left;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.card-category {
+  font-weight: 600;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0.4rem;
+  line-height: 1.3;
+}
+
+.bmw-colored-car {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bmw-colored-car img {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.bmw-footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+}
+
+.bmw-facts {
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.facts-images {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  flex-wrap: wrap;
+  
+}
+
+.facts-images img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 8px;
+  padding: 0 20px;
+}
+
+.facts-text {
+  margin-top: 1.5rem;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.bmw-skytop {
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.skytop-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.skytop-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.skytop-text {
+  margin-top: 1.5rem;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.bmw-footer {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: #1e1e1e;
+  padding: 20px;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.anniversary-section,
+.podcast-section,
+.article-section {
+  margin-bottom: 20px;
+}
+
+.anniversary-section h3 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.podcast-section p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+.language-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.language-selector span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.language-selector span:hover {
+  color: #0071c5;
+}
+
+.links-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.quick-links,
+.more-websites,
+.legal-links,
+.social-media {
+  flex: 1;
+  min-width: 200px;
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.animated-car {
+  position: absolute;
+  top: 500px;
+  bottom: 30px;
+  right: -200px;
+  width: 120px;
+  animation: drive 2s ease-in-out forwards;
+}
+
+.dust-trail {
+  position: absolute;
+  top: 480px;
+  bottom: 20px;
+  right: -200px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(100,100,100,0.4), transparent);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: dust 2s ease-in-out forwards;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150vw);
+    opacity: 0;
+  }
+}
+
+@keyframes dust {
+  0% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-140vw);
+    opacity: 0;
+  }
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+.divider {
+  width: 1px;
+  height: 38px;
+  background-color: #000000;
+  margin: 0 12px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.circular-hero {
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.circular-video-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin: 60px auto; /* وسط‌چین با فاصله از بالا پایین */
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #111; /* رنگ زمینه داخل باکس */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.circle-image {
+  background-image: url('/assets/circular-bg.png'); /* تصویر دایره‌ای که باید خودت قرار بدی */
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.circular-text {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.circular-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.circular-text p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.circular-text span {
+  display: block;
+  margin-top: 1.5rem;
+  color: #aaa;
+}
+
+.circular-footer {
+  background: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.circular-footer p {
+  font-size: 1.2rem;
+}
+
+.circular-footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.digital-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+}
+
+.digital-video {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.digital-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.digital-text p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* DigitalJourney.css */
+
+/* رنگ پس‌زمینه مطابق مقدار استخراج‌شده */
+:root {
+  --dj-bg: #3f4247;
+  --dj-text: #f1f1f1;
+  --dj-muted: #cfcfcf;
+  --max-width: 1100px;
+}
+
+/* outer section */
+.dj-section {
+  background-color: var(--dj-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 120px;
+  gap: 40px;
+}
+
+
+/* متن */
+.dj-text {
+  padding-right: 20px;
+}
+
+.dj-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff; /* سفید خالص برای تایتل */
+  margin-bottom: 20px;
+}
+
+.dj-desc {
+  font-size: 23px;
+  line-height: 1.8;
+  color: var(--dj-text);
+}
+
+/* تاریخ */
+.dj-date {
+  display: inline-block;
+  color: var(--dj-muted);
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* ویدیو / مدیا */
+.dj-media {
+  width: 6500px;
+  height: 600px;
+  transform: scale(1);
+  border: 8px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  background: #000;
+}
+
+/* ویدیو را طوری پر کن که برش مناسبی داشته باشد */
+.dj-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wonderbmw-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem ;
+}
+
+.wonderbmw-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 100px;
+}
+
+.wonderbmw-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.wonderbmw-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.wonderbmw-text {
+  margin-top: 0.5rem;
+}
+
+.wonderbmw-category {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.wonderbmw-card h3 {
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  color: #000;
+}
+
+.wonderbmw-car {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wonderbmw-car img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.bmw-section {
+  display: flex;
+  justify-content: center;   /* وسط‌چین کردن */
+  gap: 20px;                 /* فاصله بین کارت‌ها */
+  flex-wrap: wrap;           /* برای ریسپانسیو شدن */
+  padding: 40px;
+}
+
+.bmw-card {
+  flex: 1 1 45%;             /* هر کارت حدود نصف صفحه */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bmw-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.bmw-category {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.bmw-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #000;
+  line-height: 1.4;
+}
+
+
+.bmw-full-video {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.bmw-full-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+  
+}
+
+.card-text {
+  margin-top: 15px;
+}
+
+.card-category {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.card-video,
+.card-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.card-text h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 355px;
+}
+
+.card-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card{
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.card-category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin: 0;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+.digitalfeature-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 355px;
+}
+
+.digitalfeature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; 
+  display: block;
+  transition: transform 2s ease;
+}
+
+/* هاور روی عکس */
+.media-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  transition: background 2s ease;
+  pointer-events: none;
+}
+
+.media-wrapper:hover .overlay {
+  background: rgba(0,0,0,0.4);
+}
+
+.digitalfeature-text {
+  margin-top: 12px;
+}
+
+.digitalfeature-text h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.digitalfeature-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+.video-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff; /* پس‌زمینه سفید مثل BMW */
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1200px; /* برای کنترل عرض روی نمایشگرهای خیلی بزرگ */
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  border-radius: 4px;
+}
+
+.video-text {
+  text-align: left;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.video-text h3 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.video-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+}
+
+.bmw-media-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px;
+  padding: 0 310px;
+}
+
+.media-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.media-content {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+.media-card:hover .media-content {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.media-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.media-text h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.media-text p {
+  font-size: 16px;
+}
+
+.digitalblackman-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* دو ستون مساوی */
+  gap: 20px;
+  height: 50vh; /* کل ارتفاع صفحه */
+  padding: 20px 350px;
+  box-sizing: border-box;
+}
+
+.digitalblackman-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.digitalblackman-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.digitalblackman-box:hover img {
+  transform: scale(1.1); /* زوم ملایم روی هاور */
+}
+
+.digitalblackman-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.45);
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.digitalblackman-overlay h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.digitalblackman-overlay p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.tech-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff; 
+  padding: 7vh 0;
+}
+
+.tech-container {
+  width: 100%;
+  max-width: 1200px;
+
+}
+
+.tech-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  border-radius: 4px;
+}
+
+.tech-text {
+  text-align: left;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.tech-text h3 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.tech-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.image-wrapper {
+  overflow: hidden;   /* مهم برای جلوگیری از بهم ریختگی */
+  border-radius: 8px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1); /* زوم نرم */
+}
+
+.electric-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 100px;
+  background-color: #1a1a1a; /* مشکی خاکستری تیره */
+  gap: 40px;
+}
+
+/* متن سمت چپ */
+.electric-text {
+  flex: 1;
+  text-align: left;
+}
+
+.electric-text h2 {
+  font-size: 62px;
+  font-weight: bold;
+  color: #fff; /* سفید خالص برای تایتل */
+  margin-bottom: 20px;
+}
+
+.electric-text p {
+  font-size: 25px;
+  line-height: 1.8;
+  color: #ddd; /* سفید خاکستری‌تر برای متن */
+}
+
+/* تاریخ داخل متن */
+.electric-text .electric-date {
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #fff; /* خاکستری روشن‌تر برای تاریخ */
+  letter-spacing: 1px;
+}
+
+/* قاب ویدیو سمت راست */
+.electric-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-frame {
+  width: 800px;
+  height: 500px;
+  border: 8px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  background: #000;
+}
+
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ecards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  padding: 40px 350px;
+}
+
+.ecard {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 400px;   /* اینجا دستی با px تنظیم کن */
+  height: 250px;  /* اینجا هم دستی */
+}
+
+.ecard-media {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.ecard-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.ebmw-full-image {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* برای جلوگیری از بیرون زدن عکس هنگام زوم */
+  border-radius: 8px;
+}
+
+.ebmw-full-image img.ebmw-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 2s ease; /* انیمیشن نرم */
+}
+
+.ebmw-full-image:hover img.ebmw-image {
+  transform: scale(1.08); /* زوم ملایم */
+}
+
+.ebmw-text {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.ebmw-category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+
+.ebmw-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.fcards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.fcard {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fcard:hover {
+  transform: translateY(-5px);
+}
+
+.fcard-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.fcard-heading {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 15px 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fcard-text {
+  font-size: 16px;
+  color: #111;
+  margin: 0 15px 15px;
+  line-height: 1.4;
+}
+
+.electricsc-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 355px;
+}
+
+.electricsc-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.electricsc-media {
+  width: 100%;
+  aspect-ratio: 16/9; /* نسبت استاندارد مثل تصویرها */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.electricsc-video,
+.electricsc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* کامل پر کنه */
+  display: block;
+}
+
+.electricsc-text {
+  margin-top: 12px; /* فاصله از ویدیو */
+  color: #000; /* متن مشکی مثل نمونه */
+}
+
+.electricsc-text h4 {
+  font-size: 1
+}
+
+
+
