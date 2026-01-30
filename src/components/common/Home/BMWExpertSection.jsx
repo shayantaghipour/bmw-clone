@@ -10,7 +10,7 @@ const BMWExpertSection = () => {
         </video>
       </div>
 
-      <div className="expert-container">
+      <div className="expert-text">
         <h2>BECOME A BMW EXPERT</h2>
         <a href="#" className="bmw-link">
           › BMW EXPLAINED

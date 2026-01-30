@@ -12,6 +12,7 @@ import CircularWorld from "./components/layout/CircularWorld.jsx";
 import CustomLoader from "./components/specific/CustomLoader.jsx";
 import DigitalJourney from "./components/layout/DigitalJourney.jsx";
 import ElectricFuture from "./components/layout/ElectricFuture.jsx";
+import Freude from "./components/layout/Freude.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function AppContent() {
         <Route path="/circular-world" element={<CircularWorld />} />
         <Route path="/digital-journey" element={<DigitalJourney />} />
         <Route path="/electric-future" element={<ElectricFuture />} />
+        <Route path="/freude" element={<Freude />} />
       </Routes>
     </>
   );

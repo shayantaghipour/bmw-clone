@@ -7,6 +7,10 @@ import ElectricTechSection from "../common/Electric Future/ElectricTechSection";
 import ElectricGoodbyeSection from "../common/Electric Future/ElectricGoodbyeSection";
 import ElectricRee from "../common/Electric Future/ElectricRee";
 import ElectricSC from "../common/Electric Future/ElectricSC";
+import ElectricMarvelStudio from "../common/Electric Future/ElectricMarvelStudio";
+import ElectricTNE from "../common/Electric Future/ElectricTNE";
+import ElectricButton from "../common/Electric Future/ElectricButton";
+import ElectricEndSection from "../common/Electric Future/ElectricEndSection";
 
 const ElectricFuture = () => {
   return (
@@ -19,6 +23,10 @@ const ElectricFuture = () => {
       <ElectricGoodbyeSection />
       <ElectricRee />
       <ElectricSC />
+      <ElectricMarvelStudio />
+      <ElectricTNE />
+      <ElectricButton />
+      <ElectricEndSection />
     </>
   );
 };

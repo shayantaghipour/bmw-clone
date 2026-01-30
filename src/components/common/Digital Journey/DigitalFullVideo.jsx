@@ -12,7 +12,7 @@ const DigitalFullVideo = () => {
       />
       <div className="bmw-text">
         <p className="bmw-category">Inside Neue Klasse</p>
-        <h2>Heart of Joy – Fahrfreude neu definiert</h2>
+        <h2 className="bmw-title">Heart of Joy – Fahrfreude neu definiert</h2>
       </div>
     </div>
   );

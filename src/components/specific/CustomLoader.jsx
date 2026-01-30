@@ -6,7 +6,7 @@ function CustomLoader() {
       <img
         src="./src/assets/images/bmw-emoji-car.png"
         alt="Loading BMW"
-        className="animated-car"
+        className="animated-loading"
       />
       <div className="dust-trail"></div>
     </div>

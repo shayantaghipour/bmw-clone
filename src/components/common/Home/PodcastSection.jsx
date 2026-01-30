@@ -3,7 +3,7 @@ import ImageSlider from "./ImageSlider";
 
 const PodcastSection = () => {
   return (
-    <div className="podcast-section" style={{ display: "flex", gap: "2rem" }}>
+    <div className="tpodcast-section" style={{ display: "flex", gap: "2rem" }}>
       <div className="text-section" style={{ flex: 1 }}>
         <h2 className="title">
           THE BMW

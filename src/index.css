@@ -1,7 +1,9 @@
-body {
+html, body {
   background-color: #ffffff; /* مثل BMW */
   margin: 0;
   font-family: sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .logo-box {
   margin-left: 20px;
@@ -24,31 +26,54 @@ body {
 }
 
 .navbar {
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  top: 30px;
+  left: 3rem;
+  transform: translate(-50%, 0);
   z-index: 999;
-  height: 85px; /* یا هر عددی که می‌خوای */
-  max-width: 1820px;         /* حداکثر عرض باکس */
-  margin: 20px auto;            /* وسط‌چین شدن */
+  height: 85px;
+  width: 85%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 94px;
   background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+.search-toggle{
+  position: relative;  /* همیشه نسبت به navbar */
+    top: 9px;
+    right: 5px;         /* فاصله از سمت راست */
+    transform: translateY(-50%);
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: black;        /* یا هر رنگی که روی هدر معلوم باشه */
+    cursor: pointer;
+    z-index: 1100;   
 }
 
 .navbar.hide {
   transform: translateY(-200%);
+  opacity: 0;
 }
 
 .navbar.show {
   transform: translateY(0);
+  opacity: 1;
+  z-index: 2000;
 }
 
 .navbar-left {
+  position: relative;
   display: flex;
   align-items: center;
   margin-left: 40px;
@@ -56,9 +81,14 @@ body {
 }
 
 .navbar-right {
+  position: fixed;
+  top: 60px;
+  right: 20rem;
   display: flex;
-  margin-right: 250px;
-  gap: 24px;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 2000;
 }
 
 .navbar-right a {
@@ -66,12 +96,25 @@ body {
   color: #111;
   font-weight: 500;
   font-size: 14px;
-  transition: color 0.3s ease;
 }
 
 .navbar-right a:hover {
   color: #0072ce;
 }
+
+/* وقتی نوبار محو میشه، منوی راست هم همراهش حرکت کنه */
+.navbar.hide ~ .navbar-right {
+  transform: translateY(-200%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.navbar.show ~ .navbar-right {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
 
 .search-btn {
   background: none;
@@ -701,7 +744,7 @@ body {
   overflow: hidden;
 }
 
-.animated-car {
+.animated-loading {
   position: absolute;
   top: 500px;
   bottom: 30px;
@@ -1594,5 +1637,716 @@ body {
   font-size: 1
 }
 
+/* MehrAnzeigenButton.css */
 
+.mehr-section {
+  display: flex;
+  justify-content: center;  /* افقی وسط */
+  align-items: center;      /* عمودی وسط */
+  padding: 100px 0;          /* فاصله از بالا و پایین */
+  background-color: #fff;   /* بک‌گراند سفید مثل سایت BMW */
+}
+
+.mehr-button {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  padding: 13px 100px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.mehr-button:hover {
+  background-color: #0072ce;
+  color: #fff;
+}
+
+.electric-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 100px;
+  background-color: #1a1a1a; /* مشکی خاکستری تیره */
+  gap: 40px;
+}
+
+/* update electric layout for freude */
+.electric-text {
+  flex: 1;
+  text-align: left;
+}
+
+.electric-text h2 {
+  font-size: 62px;
+  font-weight: bold;
+  color: #fff; /* سفید خالص برای تایتل */
+  margin-bottom: 20px;
+}
+
+.electric-text p {
+  font-size: 25px;
+  line-height: 1.8;
+  color: #ddd; /* سفید خاکستری‌تر برای متن */
+}
+
+.electric-text .electric-date {
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #fff; /* خاکستری روشن‌تر برای تاریخ */
+  letter-spacing: 1px;
+}
+
+/* Mobile */
+/* Home */
+
+/* ========== تنظیمات پایه ========== */
+.navbar {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 85px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  z-index: 999;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.hide {
+  transform: translate(-50%, -200%);
+  opacity: 0;
+}
+
+.navbar.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+/* سمت چپ لوگو */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 70px;
+  cursor: pointer;
+}
+
+.divider {
+  width: 1px;
+  height: 35px;
+  background-color: #000;
+}
+
+.slogan {
+  font-size: 14px;
+  color: #111;
+}
+
+/* لینک‌های دسکتاپ */
+.navbar-right-desktop {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-right-desktop a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.navbar-right-desktop a:hover {
+  color: #0072ce;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ========== دکمه همبرگری ========== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+  z-index: 10000;
+}
+
+/* ========== منوی موبایل ========== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
+  gap: 1.8rem;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.mobile-menu.hide {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: #0072ce;
+}
+
+/* دکمه ضربدر روی منوی موبایل */
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10000;
+  color: #000;
+}
+
+
+/* ========== قفل اسکرول ========== */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ========== واکنش‌گرا ========== */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    padding: 0 25px;
+  }
+
+  .navbar-right-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+  width: 75px;
+  margin-left: -2rem;
+  cursor: pointer;
+}
+
+  .divider {
+  display: none;
+}
+
+.slogan {
+  display: none;
+}
+
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hero-image {
+  display: none;
+}
+
+.hero-container {
+  width: 100%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  margin-left: auto;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 80px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.feature-section {
+  width: 100%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  gap: 4rem;
+}
+
+.feature-card {
+  width: 90%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  height: auto;
+  display: block;
+  flex-direction: column;
+  margin-right: 13%;
+  margin-top: -15%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  text-align: center;
+  object-fit: cover;
+}
+
+.expert-section {
+  width: 85%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: -32px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  gap: 3px;
+}
+
+.tpodcast-section {
+  width: 85%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: -92px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.slider-section {
+  width: 85%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: 12px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loader-container {
+  width: 100%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: 12px;
+  margin-top: -6rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.dust-trail {
+  display: none;
+}
+
+.car-image {
+  width: 100%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-left: 12px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.wallpaper-section {
+  width: 85%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.overlay-image {
+  display: none;
+}
+
+.wonderbmw-section {
+  width: 85%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.bmw-skytop {
+  width: 85%;
+  max-width: 800px; /* حد مجاز برای مانیتورهای بزرگ */
+  margin-left: -83px; /* به‌صورت خودکار وسط قرار می‌گیره */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.skytop-image-container {
+  width: 100%;
+  height: auto; /* نسبت تصویر حفظ میشه */
+  border-radius: 10px;
+  object-fit: cover; /* عکس دقیقاً باکس رو پر می‌کنه */
+}
+
+.skytop-text {
+  margin-left: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.bmw-footer {
+  width: 100%;   /* همیشه 90% از صفحه */
+  max-width: 1200px; /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */            
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.anniversary-section {
+  margin-right: 5vh;
+  align-items: left;
+  justify-content: left;
+}
+
+.podcast-section {
+  width: 85%;
+  margin-right: 5vh;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.article-section {
+  margin-right: 5vh;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.language-selector {
+  margin-right: 5vh;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.copyright {
+  margin-right: 16vh;
+  background-color: #1e1e1e;
+  text-align: left;
+}
+
+/* Circular World */
+
+.circular-hero {
+  width: 100%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */  
+  height: 20%;          
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Digital Journey */
+
+.dj-section {
+  width: 80%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */          
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.dj-media {
+  width: 100%;
+  height: auto;
+  margin-right: 10rem;
+}
+
+.dj-title {
+  margin-right: 7rem;
+}
+
+.dj-title h2 {
+  font-size: 7vh;
+  margin-right: 6rem;
+}
+
+.dj-title p {
+  font-size: large;
+}
+
+.bmw-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */          
+  margin-left: -0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bmw-category {
+  font-size: small;
+}
+
+.bmw-title {
+  font-size: large;
+}
+
+.bmw-full-video {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: -20.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.digitalfeature-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: -20.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.video-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.video-text h2 {
+  font-size: large;
+  margin-left: -13.5rem;
+  
+}
+
+.video-text h3 {
+  font-size: medium;
+  margin-left: -13.5rem;
+}
+
+.bmw-media-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: -17.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.digitalblackman-container {
+  display: none;
+}
+
+.tech-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cards-container {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */         
+  margin-left: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.electric-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */          
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.video-frame {
+  width: 100%;
+  height: 250px;
+  margin-left: -9rem;
+}
+
+.electric-text {
+  position: relative;
+  left: -3rem; /* جایگزین margin-left منفی */
+  text-align: left;
+}
+
+.electric-text h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.electric-text p {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.8;
+  color: var(--dj-text);
+}
+
+.ecards {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */     
+  margin-left: -19.9rem; 
+  gap: 5rem;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.digitalfeature-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */     
+  padding-top: 3rem;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.ebmw-full-image {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */     
+  padding-top: 3rem;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.fcards {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */     
+  padding-top: 3rem;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.electricsc-section {
+  width: 85%;   /* همیشه 90% از صفحه */ /* ولی تا سقف 1200px */         /* حداکثر عرض باکس */   
+  margin-left: -20.3rem;  
+  padding-top: 3rem;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+}
 

@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ⚡ دقت کن base مهمه
+// https://vite.dev/config/
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    fs: {
+      strict: false,
+    },
+  },
   plugins: [react()],
-  base: "./", // 👈 این باعث میشه روی هر هاستی درست لود بشه
 })

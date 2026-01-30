@@ -3,6 +3,18 @@ import React from "react";
 const ElectricFutureSection = () => {
   return (
     <section className="electric-section">
+      {/* قاب ویدیو سمت راست */}
+      <div className="electric-video">
+        <div className="video-frame">
+          <video
+            src="./src/assets/videos/dj-01-stage-hd.mp4"
+            autoPlay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+
       {/* متن سمت چپ */}
       <div className="electric-text">
         <h2>Electric Future</h2>
@@ -15,20 +27,8 @@ const ElectricFutureSection = () => {
           bietet enorme Chancen für eine umweltfreundlichere und nachhaltigere
           Gesellschaft.
           <br />
-          <span className="electric-date">05.09.2025</span>
+          <span className="electric-date">18. April 2023</span>
         </p>
-      </div>
-
-      {/* قاب ویدیو سمت راست */}
-      <div className="electric-video">
-        <div className="video-frame">
-          <video
-            src="./src/assets/videos/dj-01-stage-hd.mp4"
-            autoPlay
-            loop
-            muted
-          ></video>
-        </div>
       </div>
     </section>
   );
