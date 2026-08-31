@@ -12,10 +12,6 @@ A modern, responsive BMW website clone built with React, Vite, and pure CSS.
 </p>
 
 <p align="center">
-A modern, responsive BMW website clone built with React, Vite, and pure CSS.
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/React-18-blue" />
   <img src="https://img.shields.io/badge/Vite-fast-brightgreen" />
   <img src="https://img.shields.io/badge/CSS-pure-blueviolet" />
